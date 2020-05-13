@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MigrationTest.Models;
 
 namespace MigrationTest.Data
 {
@@ -12,5 +13,7 @@ namespace MigrationTest.Data
             : base(options)
         {
         }
+
+        public DbSet<MyModel> MyModels { get; set; }
     }
 }
